@@ -1,0 +1,131 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+.nav__container {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .nav__container {
+    flex-direction: row;
+  }
+}
+.nav__title {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.8rem;
+  padding: 1rem;
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .nav__title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-left: 2rem;
+    padding-right: 0rem;
+  }
+}
+.nav__subcontainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.nav__content {
+  width: 50%;
+  font-weight: 400;
+  line-height: 1.22rem;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .nav__content {
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-align: left;
+    width: auto;
+    padding-left: 4rem;
+  }
+}
+
+.hero__container {
+  width: 100%;
+  height: 17rem;
+  background-image: url(../Assets/Images/hero-bio.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+.hero__content {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  padding-left: 0.9rem;
+}
+
+.band__title {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 2rem 0rem 0.9rem 0.9rem;
+}
+.band__container {
+  width: 100%;
+}
+.band__text-container {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .band__text-container {
+    flex-direction: row;
+  }
+}
+.band__image {
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+  height: 15rem;
+  width: 100%;
+}
+.band__text {
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+  padding-top: 1rem;
+}
+.band__text--bold {
+  font-weight: 700;
+}
+
+.gallery__title {
+  padding-top: 1rem;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+}
+.gallery__container {
+  background-color: #FAFAFA;
+}
+.gallery__sub-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.gallery__image {
+  padding: 0.9rem 0.9rem 0rem 0.9rem;
+  width: 100%;
+  height: 15rem;
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .gallery__image {
+    width: 33.3333333333%;
+    height: 6rem;
+  }
+}/*# sourceMappingURL=bio.css.map */
