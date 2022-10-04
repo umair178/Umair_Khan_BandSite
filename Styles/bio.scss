@@ -5,138 +5,501 @@
     border: 0px;
     box-sizing: border-box;
     font-family: sans-serif;
-    font-size: 18px;
 }
 .nav{
     &__container{
+        background-color: #323232;
         width: 100%;
-        background-color: black;
-        display: flex;
-        flex-direction: column;
-        color: white;
-        align-items: center;
-        @include mixins.tablet{
-            flex-direction: row;
-        }
-        
-    }
-    &__title{
-        font-weight: 500;
-        font-size: 2rem;
-        line-height: 1.8rem;
-        padding: 1rem;
-        @include mixins.tablet{
-            font-size: 1.5rem;
-            font-weight: 400;
-            padding-left: 2rem;
-            padding-right: 0rem;
-    
-        }
     }
     &__subcontainer{
         width: 100%;
         display: flex;
-        flex-direction: row;
-        //justify-content: space-between;
-        //padding: 0rem,5rem,0rem,5rem;
-    }
-    &__content{
-        width: 50%;
-        font-weight: 400;
-        line-height: 1.22rem;
-        font-size: 1.5rem;
-        text-align: center;
-        padding: 1rem;
-        //border-bottom: 3px solid white;
+        flex-direction: column;
+        color: white;
+        align-items: center;
+        justify-content: center;
         @include mixins.tablet{
-            font-weight: 400;
-            font-size: 0.9rem;
-            text-align: left;
-            width: auto;
-            padding-left: 4rem;
-            
+            flex-direction: row;
+            width: 50%;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        @include mixins.desktop{
+            flex-direction: row;
+            width: 35%;
         }
         
+    }
+    &__subcontainer1{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include mixins.tablet{
+        }
+        @include mixins.desktop{
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            padding-left: 7rem;
+            padding-right: 3rem;
+        }
+    }
+    &__subcontainer2{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      
+        @include mixins.tablet{
+            justify-content: space-between;
+
+        }
+        @include mixins.desktop{
+            justify-content: space-between;
+        }
+    }
+    &__subcontainer3{
+        width: 50%;
+        text-align: center;
+        &:hover{
+            border-bottom: 3px solid white;
+        } 
+        @include mixins.tablet{
+            width: unset;
+            &:hover{
+                 border-bottom: none;
+            }
+        } 
+        @include mixins.desktop{
+            width: unset;
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+            &:hover{
+                border-bottom: 3px solid white;
+           }
+        }
+    }
+    &__para{
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+        @include mixins.tablet{
+            padding-top: 0rem;
+            padding-bottom: 0rem;
+        }
+        @include mixins.desktop{
+            padding-top: 0rem;
+            padding-bottom: 0rem;
+            font-size: 0.5rem;
+        }
+
+    }
+
+    &__title{
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        padding-top: 1rem;
+        @include mixins.tablet{
+            height: 100%;
+            padding-top: 0rem;
+            align-self: center;
+            font-size: 1.5rem;
+            font-weight: 400;
+            padding-left: 3rem;
+        }
+        @include mixins.desktop{
+            font-size: 1.5rem;
+            font-weight: 400;
+            padding-top: 0rem;
+        }
+    }
+    
+    &__content{
+        font-weight: 400;
+        font-size: 1rem;
+        text-decoration: none;
+        color: white;
+        @include mixins.tablet{
+            font-weight: 500;
+            font-size: 1rem;
+            margin-left: 3rem;
+            padding-bottom: 16%;
+            padding-top: 16%;
+            &:hover{
+                border-bottom: 3px solid white;
+            }
+        }
+        @include mixins.desktop{
+            font-size: 1.2rem;
+        } 
     }
 
 }
 .hero{
     &__container{
         width: 100%;
-        height: 17rem;
+        height: 12rem;
         background-image:url(../Assets/Images/hero-bio.jpg);
         background-size: cover;
         background-position: center;
         display: flex;
         align-items: center;
+        @include mixins.tablet{
+            height: 32rem;
+            background-position: bottom;
+        }
+        @include mixins.desktop{
+            height: 42rem;
+            background-position: top;
+        }
     }
     &__content{
         color: white;
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 700;
         padding-left: 0.9rem;
+        @include mixins.tablet{
+            padding-left: 3rem;
+            font-size: 3.5rem;
+            padding-top: 2.5rem;
+        }
+        @include mixins.desktop{
+            padding-left: 9%;
+            font-size: 4rem;
+        }
     }
 }
 .band{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    @include mixins.tablet{
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
+    @include mixins.desktop{
+        padding-left: 15%;
+        padding-right: 15%;
+    }
     &__title{
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 700;
-        padding: 2rem 0rem 0.9rem 0.9rem;
+        padding: 1.33rem 1rem 0.9rem 1rem;
+        @include mixins.tablet{
+            font-size: 2rem;
+            padding: 2rem 1rem 2rem 3rem;
+        }
+        @include mixins.desktop{
+            padding-top: 2.7rem;
+            padding-bottom: 2.7rem;
+            padding-left: 10%;
+        }
     }
-    &__container{
-        width:100%;
-    }
-    &__text-container{
+    &__container2{
         display: flex;
         flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
         @include mixins.tablet{
             flex-direction: row;
-
+            padding-top: 1rem;
+        }
+        @include mixins.desktop{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &--subcontainer{
+            padding-right: 0.5rem;
+            @include mixins.tablet{
+                width: 50%;
+            }
+            @include mixins.desktop{
+                width: 50%;
+            }
         }
     }
     &__image{
-        padding-left: 0.9rem;
-        padding-right: 0.9rem;
-        height: 15rem;
+        height: 10rem;
         width:100%;
-      
+        @include mixins.tablet{
+            height: 25rem;
+        }
+        @include mixins.desktop{
+            height: 35rem;
+        }
     }
-    &__text{
-        padding-left: 0.9rem;
-        padding-right: 0.9rem;
+    &__text1{
+        padding-top: 0.8rem;
+        font-weight: 700;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        @include mixins.tablet{
+            font-size: 1.25rem;
+            padding-top: 1.5rem;
+            line-height: 2rem;
+        }
+        @include mixins.desktop{
+            font-size: 1.2rem;
+            width: 66%;
+            line-height: 2rem;
+        }
+    }
+    &__text2{
+        padding-top: 0.5rem;
+        font-weight: 700;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        @include mixins.tablet{
+            padding-top: 1rem;
+        }
+        @include mixins.desktop{
+            padding-top: 1.5rem;
+        }
+    }
+    &__text3{
+        padding-top: 1.5rem;
+        font-weight: 700;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        @include mixins.tablet{
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        @include mixins.desktop{
+            margin-top: 2rem;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__subtext{
+        font-size: 0.85rem;
+        font-weight: 500;
         padding-top: 1rem;
-        
-        &--bold{
-            font-weight: 700;
-            //padding-left: 0.9rem;
-            //padding-right: 0.9rem;
-            //padding-top: 1rem;
-            //padding-bottom: 1rem;
+        @include mixins.tablet{
+            line-height: 1.5rem;
+            font-size: 0.85rem;
+            text-align: left;
+        }
+        @include mixins.desktop{
+            font-size: 0.9rem;
+            line-height: 1.5rem;
+            padding-right: 1.6rem;
+            padding-top: 1.5rem;
         }
     }
 }
 .gallery{
     &__title{
         padding-top: 1rem;
-        padding-left: 0.9rem;
-        padding-right: 0.9rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        font-size: 1.9rem;
+        font-weight: 700;
+        @include mixins.tablet{
+            padding-left: 1.5rem;
+            padding-top: 3rem;
+            font-size: 2.3rem;
+        }
+        @include mixins.desktop{
+            padding-left: 9%;
+            padding-top: 2rem;
+        }
     }
     &__container{
         background-color: #FAFAFA;
+        margin-top: 1.5rem;
     }
     &__sub-container{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-
+        padding-left: 0.9rem;
+        @include mixins.tablet{
+            padding-left: 1.5rem;
+        }
+        @include mixins.desktop{
+            padding-left: 9%;
+            padding-right: 7%;
+        }
     }
     &__image{
-        padding: 0.9rem 0.9rem 0rem 0.9rem;
+        padding: 0.9rem 0.9rem 0rem 0rem;
         width: 100%;
-        height: 15rem;
+        height: 10rem;
         @include mixins.tablet{
             width: calc(100%/3);
-            height: 6rem;
+            height: 9rem;
+            width: 33.33%;
+            padding: 1.5rem 1.5rem 0rem 0rem;
+        }
+        @include mixins.desktop{
+            width: calc(100%/3);
+            height: 13rem;
+            width: 33.33%;
+            padding: 1.5rem 1.5rem 0rem 0rem;
+        }
+        
+    }
+}
+footer{
+    p{
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: white;
+        @include mixins.tablet{
+            font-size: 0.9rem;
+            font-weight: 400;
+            line-height: 0.75rem;
+        }
+        @include mixins.desktop{
+            font-size: 0.9rem;
+            line-height: 0.7rem;
+            font-weight: 400;
         }
     }
 }
+.footer{
+    &__container{
+        margin-top: 1.5rem;
+        background-color: #323232;
+        padding: 0rem 0.75rem 0rem 0.75rem;
+        @include mixins.tablet{
+            font-size: 0.2rem;
+            line-height: 1rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        @include mixins.desktop{
+            padding-left: 9%;
+            padding-right: 9%;
+            padding-top: 2rem;
+        }
+    }
+    &__subcontainer1{
+        display: flex;
+        flex-direction: column;
+        padding-top: 1.5rem;
+        @include mixins.tablet{
+            flex-direction: row;
+            padding-top: 3rem;
+        }
+        @include mixins.desktop{
+            flex-direction: row;
+        }
+    }
+    &__subcontainer2{
+        flex-direction: row;
+        padding-top: 1rem;
+        @include mixins.tablet{
+            margin-left: 2.6rem;
+            padding-top: 0rem;
+        }
+        @include mixins.desktop{
+            margin-left: 2.5rem;
+            padding-top: 0rem;
+        }
+    }
+    &__title{
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        font-weight: 500;
+        @include mixins.tablet{
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+        @include mixins.desktop{
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+    }
+    &__icons{
+        width: 1.5rem;
+        height: 1.5rem;
+        &--margin{
+            margin-left: 1rem;
+        }
+    }
+    &__subcontainer3{
+        display: flex;
+        flex-direction: column;
+        @include mixins.tablet{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        @include mixins.desktop{
+            flex-direction: row;
+            justify-content: space-between;
+            width: 80%;
+        }
+    }
+    &__subcontainer4{
+        display: flex;
+        flex-direction: column;
+        @include mixins.desktop{
+            width: calc(100%/3);
+        }
+    }
+    &__content{
+        width: max-content;
+        padding-top: 1.5rem;
+        @include mixins.tablet{
+            padding-top: 2.5rem;
+        }
+        @include mixins.desktop{
+            padding-top: 2rem;
+        }
+        &--bold{
+            font-weight: 700;
+        }
+        &--text{
+            padding-top: 0.5rem;
+        }
+    }
+    &__logo1{
+        display: none;
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        @include mixins.tablet{
+            display: flex;
+            align-self: flex-end;
+            margin-left: auto;
+        }
+        @include mixins.desktop{
+            display: flex;
+            align-self: flex-end;
+            margin-left: auto;
+        }
+    }
+    &__logo2{
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        padding-top: 4rem;
+        @include mixins.tablet{
+            display: none;
+        }
+        @include mixins.desktop{
+            display: none;
+        }
+
+    }
+    &__copyright{
+        font-size: 0.7rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        @include mixins.tablet{
+            padding-top: 3rem;
+            font-size: 0.9rem;
+            padding-bottom: 3rem;
+        }
+        @include mixins.desktop{
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+        }
+    }
+}
+
+   
