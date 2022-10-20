@@ -141,219 +141,109 @@
 .hero{
     &__container{
         width: 100%;
-        height: 12rem;
-        background-image:url(../Assets/Images/hero-bio.jpg);
+        height: 15rem;
+        background-image:url(../Assets/Images/hero-shows.jpg);
         background-size: cover;
         background-position: center;
         display: flex;
         align-items: center;
-        //background-color: #323232;
         
         @include mixins.tablet{
             height: 32rem;
-            background-position: bottom;
         }
         @include mixins.desktop{
-            height: 42rem;
+            height: 50rem;
             background-position: top;
         }
         &--overlay{
             width: 100%;
             height: 100%;
             background: rgba($color: #323232, $alpha: 0.5);
+            @include mixins.desktop{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
     }
-    &__content{
+    &__subcontainer{
+        display: flex;
+        flex-direction: column;
+        padding-left:0.9rem;
+        @include mixins.tablet{
+            padding-left: 3rem;
+        }
+        @include mixins.desktop{
+           // justify-content: flex-start;
+            //align-items: flex-start;
+            padding-left: 8.5rem;
+            padding-right: 8.5rem;
+            padding-top: 0rem;
+        }
+    }
+    &__subcontainer2{
+        display: flex;
+        flex-direction: column;
+        @include mixins.desktop{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+    }
+    &__content1{
+        color: white;
+        padding-top: 2rem;
+        @include mixins.tablet{
+            font-size: 1.3rem;
+            font-weight: 700;
+            padding-top: 4.5rem;
+        }
+        @include mixins.desktop{
+            padding-right: 3rem;
+            font-size: 1.5rem;
+            padding-top: 0rem;
+            //width: fit-content;
+            //justify-self: flex-start;
+        }
+    }
+    &__content2{
+        width: 70%;
         color: white;
         font-size: 1.5rem;
         font-weight: 700;
-        padding-left: 0.9rem;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
+        padding-top: 1rem;
         @include mixins.tablet{
-            padding-left: 3rem;
+            width: 80%;
             font-size: 3.5rem;
+            // padding-left: 3rem;
+            // font-size: 3.5rem;
+            // padding-top: 2.5rem;
+        }
+        @include mixins.desktop{
+            // padding-left: 9%;
+            font-size: 3.9rem;
+            padding-right: 5rem;
+        }
+    }
+    &__iframe{
+        padding-top: 1rem;
+        width: 94%;
+        height: 100px;
+        @include mixins.tablet{
+            height: 10rem;
             padding-top: 2.5rem;
+            width: 52%;
         }
         @include mixins.desktop{
-            padding-left: 9%;
-            font-size: 4rem;
-        }
-    }
-}
-.band{
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    @include mixins.tablet{
-        padding-left: 7rem;
-        padding-right: 7rem;
-    }
-    @include mixins.desktop{
-        padding-left: 15%;
-        padding-right: 15%;
-    }
-    &__title{
-        font-size: 1.5rem;
-        font-weight: 700;
-        padding: 1.33rem 1rem 0.9rem 1rem;
-        @include mixins.tablet{
-            font-size: 2rem;
-            padding: 2rem 1rem 2rem 3rem;
-        }
-        @include mixins.desktop{
-            padding-top: 2.7rem;
-            padding-bottom: 2.7rem;
-            padding-left: 10%;
-        }
-    }
-    &__container2{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        justify-content: space-between;
-        @include mixins.tablet{
-            flex-direction: row;
-            padding-top: 1rem;
-        }
-        @include mixins.desktop{
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        &--subcontainer{
-            padding-right: 0.5rem;
-            @include mixins.tablet{
-                width: 50%;
-            }
-            @include mixins.desktop{
-                width: 50%;
-            }
-        }
-    }
-    &__image{
-        height: 10rem;
-        width:100%;
-        @include mixins.tablet{
-            height: 25rem;
-        }
-        @include mixins.desktop{
-            height: 35rem;
-        }
-    }
-    &__text1{
-        padding-top: 0.8rem;
-        font-weight: 700;
-        font-size: 0.9rem;
-        line-height: 1.2rem;
-        @include mixins.tablet{
-            font-size: 1.25rem;
-            padding-top: 1.5rem;
-            line-height: 2rem;
-        }
-        @include mixins.desktop{
-            font-size: 1.2rem;
-            width: 66%;
-            line-height: 2rem;
-        }
-    }
-    &__text2{
-        padding-top: 0.5rem;
-        font-weight: 700;
-        font-size: 0.9rem;
-        line-height: 1.2rem;
-        @include mixins.tablet{
-            padding-top: 1rem;
-        }
-        @include mixins.desktop{
-            padding-top: 1.5rem;
-        }
-    }
-    &__text3{
-        padding-top: 1.5rem;
-        font-weight: 700;
-        font-size: 0.9rem;
-        line-height: 1.2rem;
-        @include mixins.tablet{
-            font-size: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        @include mixins.desktop{
-            margin-top: 2rem;
-            font-size: 1.5rem;
-        }
-    }
-
-    &__subtext{
-        font-size: 0.85rem;
-        font-weight: 500;
-        padding-top: 1rem;
-        @include mixins.tablet{
-            line-height: 1.5rem;
-            font-size: 0.85rem;
-            text-align: left;
-        }
-        @include mixins.desktop{
-            font-size: 0.9rem;
-            line-height: 1.5rem;
-            padding-right: 1.6rem;
-            padding-top: 1.5rem;
-        }
-    }
-}
-.gallery{
-    &__title{
-        padding-top: 1rem;
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
-        font-size: 1.9rem;
-        font-weight: 700;
-        @include mixins.tablet{
-            padding-left: 1.5rem;
-            padding-top: 3rem;
-            font-size: 2.3rem;
-        }
-        @include mixins.desktop{
-            padding-left: 9%;
-            padding-top: 2rem;
-        }
-    }
-    &__container{
-        background-color: #FAFAFA;
-        margin-top: 1.5rem;
-        padding-bottom: 2rem;
-    }
-    &__sub-container{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding-left: 0.9rem;
-        @include mixins.tablet{
-            padding-left: 1.5rem;
-        }
-        @include mixins.desktop{
-            padding-left: 9%;
-            padding-right: 7%;
-        }
-    }
-    &__image{
-        padding: 0.9rem 0.9rem 0rem 0rem;
-        width: 100%;
-        height: 10rem;
-        @include mixins.tablet{
-            width: calc(100%/3);
+            width:45%;
             height: 9rem;
-            width: 33.33%;
-            padding: 1.5rem 1.5rem 0rem 0rem;
+            align-self: flex-end;
+            //padding-left: 21rem;
         }
-        @include mixins.desktop{
-            width: calc(100%/3);
-            height: 13rem;
-            width: 33.33%;
-            padding: 1.5rem 1.5rem 0rem 0rem;
-        }
-        
+
     }
 }
+
 footer{
     p{
         font-size: 0.8rem;
@@ -371,199 +261,188 @@ footer{
         }
     }
 }
-.form{
-    &__container{
-        padding-left: 0.9rem;
-        padding-right: 0.9rem;
-        padding-top: 2rem;
+
+.shows{
+    margin-top: 2rem;
+    margin-left: 0.9rem;
+    margin-right: 0.9rem;
+    @include mixins.tablet{
+        margin-right: 1.5rem;
+        margin-left: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    &__list{
+        list-style: none;
+        list-style-type: none;
         @include mixins.tablet{
-            padding-top: 3rem;
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
-        }
-        @include mixins.desktop{
-            padding-left: 9%;
-            padding-top: 3rem;
+            //padding-left: 1.5rem;
         }
     }
     &__heading{
+        font-size: 2rem;
         @include mixins.tablet{
-            font-size: 2.2rem;
+            padding-bottom: 2rem;
+            padding-left: 1.5rem;
         }
         @include mixins.desktop{
-            font-size: 2.3rem;
+            padding-left: 4rem;
         }
     }
-    &__subcontainer1{
-        display: flex;
-        @include mixins.tablet{
-            padding-left: 3.8rem;
-        }
-        @include mixins.desktop{
-            justify-content: center;
-            padding-right: 2.5rem;
-        }
-    }
-    &__image{
-        border-radius: 50%;
-        width: 2rem;
-        height: 2rem;  
-        margin-top: 1.7rem;   
-        @include mixins.tablet{
-            width: 2.5rem;
-            height: 2.5rem;
-            margin-top: 2.2rem;
-        }   
-        @include mixins.desktop{
-            margin-top: 3rem;
-            height: 3rem;
-            width: 3rem;
-        }
-    }
-    &__subcontainer2{
-        display: flex;
-        flex-direction: column;
-        padding-left: 1rem;
-        width: 100%;
-        @include mixins.tablet{
-            width: 80%;
-        }
-        @include mixins.desktop{
-            width: 45%;
-            //justify-content: center;
-        }
-    }
-    &__input{
-        border: 1px #afafaf solid;
-        height: 2rem;
-        width: 100%;
-        border-radius: 0.2rem;
-        padding-left: 1rem;
-        background-color: #FAFAFA;
-        &:hover{
-            border: 1px black solid;
-        }
-        @include mixins.tablet{
-            height: 2.7rem;
-            //width: 80%;
-        }
-        @include mixins.desktop{
-            height: 3rem;
-        }
-        &--comment{
-            height: 5.3rem;
-        }
-        &--submit{
-            border: 1px #afafaf solid;
-            height: 40px;
-            width: 100%;
-            border-radius: 4px;
-            padding-left: 1rem;
-            background-color: #323232;
-            color: white;
-            margin-top: 1rem;
-            padding-left: 0rem;
-            font-size: 1rem;
-            height: 2rem;
-            &:hover{
-                background-color: #000000;
-            }
-            @include mixins.tablet{
-                width: 8.5rem;
-                align-self: flex-end;
-                height: 2.2rem;
-
-            }
-            @include mixins.desktop{
-                align-self: flex-end;
-                width: 8.5rem;
-                height: 2.2rem;
-            }
-        }
-    }
-    &__label{
-        color: #afafaf;
-        font-size: 0.8rem;
-        padding-top: 1rem;
-        padding-bottom: 4px;
-        @include mixins.tablet{
-            padding-top: 1.5rem;
-        }
-        @include mixins.desktop{
-            padding-top: 2rem;
-            //padding-bottom: 4px;
-            font-weight: 700;
-            //font-size: 1rem;
-        }
-    }
-}
-.comments{
     &__container{
-        margin-left: 0.9rem;
-        margin-right: 0.9rem;
-        margin-top: 1rem;
-        border-top: 1px #e1e1e1 solid;
+        border-bottom: 2px #e1e1e1 solid;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        &:hover{
+            background: #e1e1e1;
+            //background: #afafaf;
+        }
+        &:active{
+
+            background: #FAFAFA;
+        }
         @include mixins.tablet{
-            margin-left: 5.3rem;
-            margin-right: 6.8rem;
+            flex-direction: row;
+            align-items: center;
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            &:hover{
+                background: #e1e1e1;
+            }
+            &:active{
+    
+                background: #FAFAFA;
+            }
         }
         @include mixins.desktop{
-            margin-left: 31%;
-            margin-right: 26%;
+            flex-direction: row;
+            width: 66%;
+            margin-left: 22rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            align-items: center;
+            &:hover{
+                background: #e1e1e1;
+            }
+            &:active{
+    
+                background: #FAFAFA;
+            }
         }
-    }
+
+    }     
     &__subcontainer1{
         display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+        width: 100%;
+        @include mixins.tablet{
+            padding-top: 0rem;
+        }
+        @include mixins.desktop{
+            padding-top: 0rem;
+            //padding-left: 1rem;
+        }
     }
     &__subcontainer2{
         display: flex;
         flex-direction: column;
-        padding-left: 1rem;
         padding-top: 1rem;
         width: 100%;
+        padding-bottom: 1rem;
+        @include mixins.tablet{
+            padding-bottom: 0rem;
+            padding-top: 0rem;
+        }
         @include mixins.desktop{
             padding-left: 1rem;
         }
     }
-    &__subcontainer3{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-between;
-        padding-bottom: 0.5rem;
-    }
-    &__image{
-        border-radius: 50%;
-        width: 2rem;
-        height: 2rem;  
-        margin-top: 1rem; 
-        content: url(../Assets/Images/Mohan-muruge.jpg); 
+
+    &__title-container{
+        display: none;
         @include mixins.tablet{
-            height: 2.5rem;
-            width: 2.5rem;
+            display: unset;
+            padding-left: 1.5rem;
+            //padding-right: 1.5rem;
+            display: flex;
+            flex-direction: row;
+            width: 59%;
+            justify-content: space-between;
         }
         @include mixins.desktop{
-            height: 2.7rem;
-            width: 2.7rem;
+            display: unset;
+            margin-left: 23.5rem;
+            display: flex;
+            flex-direction: row;
+            width: 39%;
+            justify-content: space-between;
+
         }
     }
     &__title{
-        font-size: 1rem;
-        font-weight: 700;
-    }
-    &__date{
         color: #afafaf;
+        display: none;
+        @include mixins.tablet{
+            display: unset;
+            padding-bottom: 1rem;
+        }
+        @include mixins.desktop{
+            display: unset;
+        }
+        &--venue{
+            @include mixins.desktop{
+                padding-left: 12%;
+            }
+        }
+        
     }
     &__text{
+        color: #afafaf;
+        padding-bottom: 0.5rem;
+        font-size: 0.8rem;
         @include mixins.tablet{
+            display: none;
             font-size: 0.9rem;
         }
         @include mixins.desktop{
-            line-height: 1.5rem;
-            font-weight: 500;
+            display: none;
+            font-size: 0.9rem;
+            
+        }
+      
+    }
+    &__text1{
+        font-weight: 600;
+        font-size: 0.9rem;
+      
+    }
+    &__text2{
+        font-size: 0.9rem;
+        @include mixins.desktop{
+            padding-left: 3rem;
         }
     }
+    &__button{
+        border: 1px #afafaf solid;
+        width: 100%;
+        border-radius: 4px;
+        background-color: #323232;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 500;
+        height: 3rem;
+        @include mixins.tablet{
+            height: 2.5rem;
+            width: 100%;
+        }
+
+    }
 }
+
 .footer{
     &__container{
         margin-top: 1.5rem;
@@ -706,4 +585,3 @@ footer{
     }
 }
 
-   
