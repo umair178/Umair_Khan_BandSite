@@ -103,16 +103,17 @@ form.addEventListener('submit', function (e) {
     e.preventDefault();
     const inputname = e.target.username.value;
     const inputcomment = e.target.usercomment.value;
-    addcomment(inputname,inputcomment)
+    // addcomment(inputname,inputcomment)
     getapikey().then(response=>{
         axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${response}`)
         .then(response=>{
             let comments = response.data
             Promise.resolve(comments)
             let new_comments = comments.sort((a,b)=>{
-                return b.timestamp - a.timestamp
+                b.timestamp - a.timestamp
             })
             console.log(new_comments)
+            console.log(new_comments[0])
             displaynewcomment(new_comments[0])
         })
     })
@@ -125,7 +126,7 @@ function displaynewcomment(comment) {
     //create li and prepend to ul
     const listElement = document.createElement("li");
     const ul = document.getElementById('comments-list')
-    ul.prepend(listElement);
+    ul.insertBefore(listElement,ul.children[0]);
     // create first div and append to listElement
     const firstdiv = document.createElement('div');
     firstdiv.classList.add('comments__container');
